@@ -1,7 +1,8 @@
-function Bag ({price, tag, image, name}) {
+function Bag ({price, bestseller, image, name}) {
     return (
     <article>
-        <span>{tag}</span>
+
+        <span>{bestseller? "Best seller":"New collection"}</span>
         <img src={image} alt={name}/>
         <p>The {name} bag</p>
         <h4>€{price},-</h4>

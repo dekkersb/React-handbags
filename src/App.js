@@ -1,11 +1,16 @@
 import React from 'react';
 import './App.css';
+
 import NavButton from "./NavButton";
 import Bag from "./Bags";
+import Tile from "./Tile";
+
 import bag1 from "./assets/bag_1.png";
 import bag2 from "./assets/bag_2.png";
 import bag3 from "./assets/bag_3.png";
 import bag4 from "./assets/bag_4.png";
+import brand from "./assets/brand.png";
+import ourstory from "./assets/our_story.png";
 
 
 function App() {
@@ -14,6 +19,7 @@ function App() {
           <header>
           <h1>Handbags & Purses</h1>
           </header>
+
               <nav>
                   <NavButton
                   description="to the collection"/>
@@ -23,53 +29,50 @@ function App() {
                   description="pre-orders"
                   isDisabled={true}/>
         </nav>
+
           <main>
               <Bag
-              tag = "Best seller"
+              bestseller ={true}
               image= {bag1}
               name= "handy"
-              price= {400}/>
+              price= {400}
+              />
               <Bag
-              tag = "Best seller"
+              bestseller ={true}
               image = {bag2}
               name = "stylish"
-              price = {250}/>
+              price = {250}
+              />
               <Bag
-              tag = "New collection"
+              bestseller = {false}
               image = {bag3}
               name = "simple"
-              price = {300}/>
+              price = {300}
+              />
               <Bag
-              tag = "New collection"
+              bestseller = {false}
               image = {bag4}
               name = "trendy"
-              price= {150}/>
-
-{/*              <article>
-                  <span>Best seller</span>
-                  <img src={bag1} alt="bag 1"/>
-                  <p>The handy bag</p>
-                  <h4>€400,-</h4>
-              </article>
-              <article>
-                  <span>Best seller</span>
-                  <img src="./assets/bag_2.png" alt="bag 2"/>
-                  <p>The stylish bag</p>
-                  <h4>€250,-</h4>
-              </article>
-              <article>
-                  <span>New collection</span>
-                  <img src="./assets/bag_3.png" alt="bag 3"/>
-                  <p>The simple bag</p>
-                  <h4>€300,-</h4>
-              </article>
-              <article>
-                  <span>New collection</span>
-                  <img src="./assets/bag_4.png" alt="bag 4"/>
-                  <p>The trendy bag</p>
-                  <h4>€150,-</h4>
-              </article>*/}
+              price= {150}
+              />
           </main>
+
+          <footer>
+              <Tile
+              title="THE BRAND"
+              content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cupiditate impedit ipsa ipsum, laboriosam officia porro provident quae quam saepe sapiente voluptas? Ab accusamus at consequuntur corporis cum deserunt eligendi, ex facere id ipsam ipsum iure labore magnam magni maiores modi non quibusdam quis reiciendis repellat reprehenderit sunt suscipit velit."
+              />
+              <Tile
+              image={brand} altImage={"OUR BRAND"}
+              />
+              <Tile
+                  image={ourstory} altImage={"OUR STORY"}
+              />
+              <Tile
+              title="OUR STORY"
+              content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto assumenda, consequatur, cum cupiditate esse ex id illum inventore itaque laudantium magni molestias neque perferendis, quasi quibusdam rerum temporibus? Ab eaque eos fuga fugiat natus quam quidem tempore tenetur! Cum doloribus eaque illum inventore nulla numquam placeat ratione saepe vitae."
+              />
+          </footer>
       </>
   );
 }
